@@ -32,7 +32,7 @@ This is what I got for sorting 50,000 numbers.
 | Bubble Sort:  | 14.199s|
 | Insertion Sort |  7.159s|
 | Heap Sort      |  0.085s|
-| Merge Sort    |  0.080s | ( 200x faster than Bubble sort ! )
+| Merge Sort    |  0.080s | 
 | Radix Sort    |  0.077s|
 | Quick Sort     |  0.069s |  
 | Counting Sort  |  0.060s|
