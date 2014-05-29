@@ -6,7 +6,7 @@ Sorting
 * Merge Sort
 * Quick Sort
 * Heap Sort
-
+* Counting Sort
 
 ###Running time
 
@@ -23,10 +23,12 @@ $ real 0m0.xyzs
 ``` 
 
 Where user+sys gives us the CPU time the process used, and real gives the wall clock time,from start to finish.
+This is **not** the worst case.The performance might vary for a different test case for heap,merge and quick sort.
 This is what I got for sorting 50,000 numbers.
                     
 * Bubble Sort:   : 14.199s
 * Insertion Sort :  7.159s
 * Heap Sort      :  0.085s
-* Merge Sort     :  0.080s
-* Quick Sort     :  0.069s   ( 205x faster than Bubble sort!! )
+* Merge Sort     :  0.080s  ( 200x faster than Bubble sort ! )
+* Quick Sort     :  0.069s   
+* Counting Sort  :  0.060s
