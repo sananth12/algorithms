@@ -34,5 +34,5 @@ This is what I got for sorting 50,000 numbers.
 | Heap Sort      |  0.085s|
 | Merge Sort    |  0.080s | ( 200x faster than Bubble sort ! )
 | Radix Sort    |  0.077s|
-* Quick Sort     :  0.069s   
-* Counting Sort  :  0.060s
+| Quick Sort     |  0.069s |  
+| Counting Sort  |  0.060s|
