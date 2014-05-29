@@ -6,7 +6,7 @@ int main()
  
   printf("Enter number of elements\n");
   scanf("%d", &n);
-  int array[100001];
+  int array[n];
   printf("Enter %d integers\n", n);
  
   for (c = 0; c < n; c++)

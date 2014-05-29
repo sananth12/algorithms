@@ -31,10 +31,10 @@ using namespace std;
 int main()
 {
     int n;
-    cout<<"No. of elements: ";
+   // cout<<"No. of elements: ";
     cin>>n;
-    int i,arr[n];
-    cout<<"Enter the elements: ";
+    int i,arr[100001];
+    //cout<<"Enter the elements: ";
     for(i=0;i<n;i++)
         cin>>arr[i];
     quick_sort(arr,0,n-1);
