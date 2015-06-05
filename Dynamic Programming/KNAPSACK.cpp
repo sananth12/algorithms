@@ -1,31 +1,55 @@
-#include<stdio.h>
 #include<iostream>
-#include<vector>
-#include<algorithm>
+#include<stdio.h>
+#define maxi(x,y) (x>y)?x:y;
+#define N 2000001
+int v[501],w[501];
+int s[N],t[N];
 using namespace std;
+
 int main()
 {
-   int s,n;
-   cin>>s>>n;
-   int dp[100][100]={0};
-   int i,item[n][2];  // weight,value
-   for(i=1;i<=n;i++)
-       cin>>item[i][0]>>item[i][1];
-   for(i=1;i<=n;i++)
-        dp[i][0]=0;
-   for(i=1;i<=n;i++)
-   {
-       for(int j=0;j<=s;j++)
-       {
-           if(item[i][0]<=j)
-            dp[i][j]=max( dp[i-1][j], dp[i-1][j-item[i][0]]+ item[i][1] );
-            else
-            dp[i][j]=dp[i-1][j];
+    int i,k,n,j;
+    cin>>k>>n;
 
-          //  cout<<dp[i][j]<<" ";
-       }
-      // cout<<endl;
-   }
-    cout<<dp[n-1][s];
-return 0;
+    for(i=1;i<=n;i++)
+        scanf("%d%d",&(v[i]),&(w[i]));
+
+    for(i=0;i<=k;i++)
+    {
+        t[i]=0;
+        s[i]=0;
+    }
+
+    for(i=1;i<=n;i++)
+    {
+        if(i%2)
+        {
+                for(j=1;j<=k;j++)
+                {
+                        if(w[i]<=j){
+                            t[j] = maxi(s[j],s[j-w[i]]+v[i]);}
+                        else{
+                            t[j] = s[j];}
+
+                }
+        }
+        else
+        {
+                for(j=0;j<=k;j++)
+                {
+                        if(w[i]<=j){
+                            s[j] = maxi(t[j],t[j-w[i]]+v[i]);}
+                        else{
+                            s[j] = t[j];}
+
+                }
+        }
+    }
+
+    if(n&1)
+        printf("%d",t[k]);
+    else
+        printf("%d",s[k]);
+
+    return 0;
 }
